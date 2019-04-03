@@ -60,7 +60,7 @@ def main():
     logger.info('Process started...')
     #https://fatalmodel.com/366618/natalia-passo-fundo/3070694
     posts = list()
-    posts.append(Post('https://fatalmodel.com/125829/marty-passo-fundo/3088921', 2, 13))
+    posts.append(Post('https://fatalmodel.com/412752/luana-dias-passo-fundo/3125728', 2, 13))
 
     while len(posts) != 0:
         for post in posts:
