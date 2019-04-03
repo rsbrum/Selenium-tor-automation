@@ -11,7 +11,7 @@ class Webdrivers:
         return webdriver.Chrome()
 
     def tor(self):
-        tbb_dir = "/home/rnsbrum/Desktop/tor-browser_en-US"
+        tbb_dir = "~/Desktop/tor-browser_en-US"
         driver = TorBrowserDriver(tbb_dir) 
         return driver
 
