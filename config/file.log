@@ -1,0 +1,471 @@
+2019-03-23 22:48:30,819 - config.logger - INFO - Created post with id {id}
+2019-03-23 22:48:30,819 - config.logger - INFO - Scrapping post likes...
+2019-03-23 22:48:32,117 - config.logger - INFO - Scrapping post likes...
+2019-03-23 22:48:32,648 - config.logger - INFO - Getting post link...
+2019-03-23 22:48:32,648 - config.logger - INFO - Started like process
+2019-03-23 22:48:35,224 - config.logger - INFO - Cleaning temp files...
+2019-03-23 22:48:35,293 - config.logger - INFO - Temp files cleaned successfully...
+2019-03-23 22:48:35,293 - config.logger - ERROR - Message: other os error
+Traceback (most recent call last):
+  File "main.py", line 62, in main
+    like_post(post.get_post_link())
+  File "main.py", line 24, in like_post
+    driver = wb.tor()
+  File "/home/rnsbrum/Desktop/dev/fatal/likerbot/controllers/webdrivers/webdrivers.py", line 15, in tor
+    driver = TorBrowserDriver(tbb_dir)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/tbselenium/tbdriver.py", line 57, in __init__
+    log_path=tbb_logfile_path)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/selenium/webdriver/firefox/webdriver.py", line 174, in __init__
+    keep_alive=True)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/selenium/webdriver/remote/webdriver.py", line 157, in __init__
+    self.start_session(capabilities, browser_profile)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/selenium/webdriver/remote/webdriver.py", line 252, in start_session
+    response = self.execute(Command.NEW_SESSION, parameters)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+WebDriverException: Message: other os error
+
+2019-03-23 22:48:35,399 - config.logger - INFO - Getting post link...
+2019-03-23 22:48:35,399 - config.logger - INFO - Started like process
+2019-03-23 22:49:46,093 - config.logger - INFO - Cleaning temp files...
+2019-03-23 22:49:46,121 - config.logger - INFO - Temp files cleaned successfully...
+2019-03-23 22:49:46,122 - config.logger - ERROR - Message: Browsing context has been discarded
+Traceback (most recent call last):
+  File "main.py", line 62, in main
+    like_post(post.get_post_link())
+  File "main.py", line 26, in like_post
+    liker.like_post(driver, post)
+  File "/home/rnsbrum/Desktop/dev/fatal/likerbot/controllers/liker/liker.py", line 45, in like_post
+    webdriver.close()
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/selenium/webdriver/remote/webdriver.py", line 688, in close
+    self.execute(Command.CLOSE)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+NoSuchWindowException: Message: Browsing context has been discarded
+
+2019-03-23 22:49:46,123 - config.logger - INFO - Getting post link...
+2019-03-23 22:49:46,123 - config.logger - INFO - Started like process
+2019-03-23 22:50:43,182 - config.logger - INFO - Created post with id {id}
+2019-03-23 22:50:43,182 - config.logger - INFO - Scrapping post likes...
+2019-03-23 22:50:43,852 - config.logger - INFO - Scrapping post likes...
+2019-03-23 22:50:44,407 - config.logger - INFO - Getting post link...
+2019-03-23 22:50:44,407 - config.logger - INFO - Started like process
+2019-03-23 23:17:29,596 - INFO - main - Started like process
+2019-03-23 23:18:22,104 - INFO - main - Cleaning temp files...
+2019-03-23 23:18:22,142 - INFO - main - Temp files cleaned successfully...
+2019-03-23 23:18:22,142 - ERROR - main - Message: Failed to decode response from marionette
+Traceback (most recent call last):
+  File "main.py", line 72, in main
+    like_post(post.get_post_link())
+  File "main.py", line 36, in like_post
+    liker.like_post(driver, post)
+  File "/home/rnsbrum/Desktop/dev/fatal/likerbot/controllers/liker/liker.py", line 45, in like_post
+    webdriver.close()
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/selenium/webdriver/remote/webdriver.py", line 688, in close
+    self.execute(Command.CLOSE)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+WebDriverException: Message: Failed to decode response from marionette
+
+2019-03-23 23:18:22,143 - INFO - main - Started like process
+2019-03-23 23:26:58,569 - INFO - main - Started like process
+2019-03-23 23:26:58,570 - INFO - main - Cleaning temp files...
+2019-03-23 23:26:58,594 - INFO - main - Temp files cleaned successfully...
+2019-03-23 23:26:58,595 - ERROR - main - [Errno 2] No usable temporary directory found in ['/tmp', '/var/tmp', '/usr/tmp', '/home/rnsbrum/Desktop/tor-browser_en-US/Browser']
+Traceback (most recent call last):
+  File "main.py", line 72, in main
+    like_post(post.get_post_link())
+  File "main.py", line 34, in like_post
+    driver = wb.tor()
+  File "/home/rnsbrum/Desktop/dev/fatal/likerbot/controllers/webdrivers/webdrivers.py", line 15, in tor
+    driver = TorBrowserDriver(tbb_dir)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/tbselenium/tbdriver.py", line 45, in __init__
+    self.profile = webdriver.FirefoxProfile(self.tbb_profile_path)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/selenium/webdriver/firefox/firefox_profile.py", line 77, in __init__
+    self.tempfolder = tempfile.mkdtemp()
+  File "/usr/lib/python2.7/tempfile.py", line 331, in mkdtemp
+    dir = gettempdir()
+  File "/usr/lib/python2.7/tempfile.py", line 275, in gettempdir
+    tempdir = _get_default_tempdir()
+  File "/usr/lib/python2.7/tempfile.py", line 217, in _get_default_tempdir
+    ("No usable temporary directory found in %s" % dirlist))
+IOError: [Errno 2] No usable temporary directory found in ['/tmp', '/var/tmp', '/usr/tmp', '/home/rnsbrum/Desktop/tor-browser_en-US/Browser']
+2019-03-23 23:26:58,653 - INFO - main - Started like process
+2019-03-23 23:27:01,220 - INFO - main - Cleaning temp files...
+2019-03-23 23:27:01,244 - INFO - main - Temp files cleaned successfully...
+2019-03-23 23:27:01,245 - ERROR - main - Message: other os error
+Traceback (most recent call last):
+  File "main.py", line 72, in main
+    like_post(post.get_post_link())
+  File "main.py", line 34, in like_post
+    driver = wb.tor()
+  File "/home/rnsbrum/Desktop/dev/fatal/likerbot/controllers/webdrivers/webdrivers.py", line 15, in tor
+    driver = TorBrowserDriver(tbb_dir)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/tbselenium/tbdriver.py", line 57, in __init__
+    log_path=tbb_logfile_path)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/selenium/webdriver/firefox/webdriver.py", line 174, in __init__
+    keep_alive=True)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/selenium/webdriver/remote/webdriver.py", line 157, in __init__
+    self.start_session(capabilities, browser_profile)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/selenium/webdriver/remote/webdriver.py", line 252, in start_session
+    response = self.execute(Command.NEW_SESSION, parameters)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+WebDriverException: Message: other os error
+
+2019-03-23 23:27:01,246 - INFO - main - Started like process
+2019-03-23 23:27:03,748 - INFO - main - Cleaning temp files...
+2019-03-23 23:27:03,780 - INFO - main - Temp files cleaned successfully...
+2019-03-23 23:27:03,781 - ERROR - main - Message: other os error
+Traceback (most recent call last):
+  File "main.py", line 72, in main
+    like_post(post.get_post_link())
+  File "main.py", line 34, in like_post
+    driver = wb.tor()
+  File "/home/rnsbrum/Desktop/dev/fatal/likerbot/controllers/webdrivers/webdrivers.py", line 15, in tor
+    driver = TorBrowserDriver(tbb_dir)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/tbselenium/tbdriver.py", line 57, in __init__
+    log_path=tbb_logfile_path)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/selenium/webdriver/firefox/webdriver.py", line 174, in __init__
+    keep_alive=True)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/selenium/webdriver/remote/webdriver.py", line 157, in __init__
+    self.start_session(capabilities, browser_profile)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/selenium/webdriver/remote/webdriver.py", line 252, in start_session
+    response = self.execute(Command.NEW_SESSION, parameters)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+WebDriverException: Message: other os error
+
+2019-03-23 23:27:03,782 - INFO - main - Started like process
+2019-03-23 23:27:06,327 - INFO - main - Cleaning temp files...
+2019-03-23 23:27:06,360 - INFO - main - Temp files cleaned successfully...
+2019-03-23 23:27:06,360 - ERROR - main - Message: other os error
+Traceback (most recent call last):
+  File "main.py", line 72, in main
+    like_post(post.get_post_link())
+  File "main.py", line 34, in like_post
+    driver = wb.tor()
+  File "/home/rnsbrum/Desktop/dev/fatal/likerbot/controllers/webdrivers/webdrivers.py", line 15, in tor
+    driver = TorBrowserDriver(tbb_dir)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/tbselenium/tbdriver.py", line 57, in __init__
+    log_path=tbb_logfile_path)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/selenium/webdriver/firefox/webdriver.py", line 174, in __init__
+    keep_alive=True)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/selenium/webdriver/remote/webdriver.py", line 157, in __init__
+    self.start_session(capabilities, browser_profile)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/selenium/webdriver/remote/webdriver.py", line 252, in start_session
+    response = self.execute(Command.NEW_SESSION, parameters)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+WebDriverException: Message: other os error
+
+2019-03-23 23:27:06,360 - INFO - main - Started like process
+2019-03-23 23:27:08,904 - INFO - main - Cleaning temp files...
+2019-03-23 23:27:08,936 - INFO - main - Temp files cleaned successfully...
+2019-03-23 23:27:08,937 - ERROR - main - Message: other os error
+Traceback (most recent call last):
+  File "main.py", line 72, in main
+    like_post(post.get_post_link())
+  File "main.py", line 34, in like_post
+    driver = wb.tor()
+  File "/home/rnsbrum/Desktop/dev/fatal/likerbot/controllers/webdrivers/webdrivers.py", line 15, in tor
+    driver = TorBrowserDriver(tbb_dir)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/tbselenium/tbdriver.py", line 57, in __init__
+    log_path=tbb_logfile_path)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/selenium/webdriver/firefox/webdriver.py", line 174, in __init__
+    keep_alive=True)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/selenium/webdriver/remote/webdriver.py", line 157, in __init__
+    self.start_session(capabilities, browser_profile)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/selenium/webdriver/remote/webdriver.py", line 252, in start_session
+    response = self.execute(Command.NEW_SESSION, parameters)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+WebDriverException: Message: other os error
+
+2019-03-23 23:27:08,937 - INFO - main - Started like process
+2019-03-23 23:27:11,512 - INFO - main - Cleaning temp files...
+2019-03-23 23:27:11,547 - INFO - main - Temp files cleaned successfully...
+2019-03-23 23:27:11,547 - ERROR - main - Message: other os error
+Traceback (most recent call last):
+  File "main.py", line 72, in main
+    like_post(post.get_post_link())
+  File "main.py", line 34, in like_post
+    driver = wb.tor()
+  File "/home/rnsbrum/Desktop/dev/fatal/likerbot/controllers/webdrivers/webdrivers.py", line 15, in tor
+    driver = TorBrowserDriver(tbb_dir)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/tbselenium/tbdriver.py", line 57, in __init__
+    log_path=tbb_logfile_path)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/selenium/webdriver/firefox/webdriver.py", line 174, in __init__
+    keep_alive=True)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/selenium/webdriver/remote/webdriver.py", line 157, in __init__
+    self.start_session(capabilities, browser_profile)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/selenium/webdriver/remote/webdriver.py", line 252, in start_session
+    response = self.execute(Command.NEW_SESSION, parameters)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+WebDriverException: Message: other os error
+
+2019-03-23 23:27:11,548 - INFO - main - Started like process
+2019-03-23 23:27:14,079 - INFO - main - Cleaning temp files...
+2019-03-23 23:27:14,117 - INFO - main - Temp files cleaned successfully...
+2019-03-23 23:27:14,118 - ERROR - main - Message: other os error
+Traceback (most recent call last):
+  File "main.py", line 72, in main
+    like_post(post.get_post_link())
+  File "main.py", line 34, in like_post
+    driver = wb.tor()
+  File "/home/rnsbrum/Desktop/dev/fatal/likerbot/controllers/webdrivers/webdrivers.py", line 15, in tor
+    driver = TorBrowserDriver(tbb_dir)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/tbselenium/tbdriver.py", line 57, in __init__
+    log_path=tbb_logfile_path)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/selenium/webdriver/firefox/webdriver.py", line 174, in __init__
+    keep_alive=True)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/selenium/webdriver/remote/webdriver.py", line 157, in __init__
+    self.start_session(capabilities, browser_profile)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/selenium/webdriver/remote/webdriver.py", line 252, in start_session
+    response = self.execute(Command.NEW_SESSION, parameters)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+WebDriverException: Message: other os error
+
+2019-03-23 23:27:14,119 - INFO - main - Started like process
+2019-03-23 23:27:16,630 - INFO - main - Cleaning temp files...
+2019-03-23 23:27:16,665 - INFO - main - Temp files cleaned successfully...
+2019-03-23 23:27:16,666 - ERROR - main - Message: other os error
+Traceback (most recent call last):
+  File "main.py", line 72, in main
+    like_post(post.get_post_link())
+  File "main.py", line 34, in like_post
+    driver = wb.tor()
+  File "/home/rnsbrum/Desktop/dev/fatal/likerbot/controllers/webdrivers/webdrivers.py", line 15, in tor
+    driver = TorBrowserDriver(tbb_dir)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/tbselenium/tbdriver.py", line 57, in __init__
+    log_path=tbb_logfile_path)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/selenium/webdriver/firefox/webdriver.py", line 174, in __init__
+    keep_alive=True)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/selenium/webdriver/remote/webdriver.py", line 157, in __init__
+    self.start_session(capabilities, browser_profile)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/selenium/webdriver/remote/webdriver.py", line 252, in start_session
+    response = self.execute(Command.NEW_SESSION, parameters)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+WebDriverException: Message: other os error
+
+2019-03-23 23:27:16,666 - INFO - main - Started like process
+2019-03-23 23:27:19,183 - INFO - main - Cleaning temp files...
+2019-03-23 23:27:19,217 - INFO - main - Temp files cleaned successfully...
+2019-03-23 23:27:19,218 - ERROR - main - Message: other os error
+Traceback (most recent call last):
+  File "main.py", line 72, in main
+    like_post(post.get_post_link())
+  File "main.py", line 34, in like_post
+    driver = wb.tor()
+  File "/home/rnsbrum/Desktop/dev/fatal/likerbot/controllers/webdrivers/webdrivers.py", line 15, in tor
+    driver = TorBrowserDriver(tbb_dir)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/tbselenium/tbdriver.py", line 57, in __init__
+    log_path=tbb_logfile_path)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/selenium/webdriver/firefox/webdriver.py", line 174, in __init__
+    keep_alive=True)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/selenium/webdriver/remote/webdriver.py", line 157, in __init__
+    self.start_session(capabilities, browser_profile)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/selenium/webdriver/remote/webdriver.py", line 252, in start_session
+    response = self.execute(Command.NEW_SESSION, parameters)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+WebDriverException: Message: other os error
+
+2019-03-23 23:27:19,218 - INFO - main - Started like process
+2019-03-23 23:27:21,722 - INFO - main - Cleaning temp files...
+2019-03-23 23:27:21,761 - INFO - main - Temp files cleaned successfully...
+2019-03-23 23:27:21,762 - ERROR - main - Message: other os error
+Traceback (most recent call last):
+  File "main.py", line 72, in main
+    like_post(post.get_post_link())
+  File "main.py", line 34, in like_post
+    driver = wb.tor()
+  File "/home/rnsbrum/Desktop/dev/fatal/likerbot/controllers/webdrivers/webdrivers.py", line 15, in tor
+    driver = TorBrowserDriver(tbb_dir)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/tbselenium/tbdriver.py", line 57, in __init__
+    log_path=tbb_logfile_path)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/selenium/webdriver/firefox/webdriver.py", line 174, in __init__
+    keep_alive=True)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/selenium/webdriver/remote/webdriver.py", line 157, in __init__
+    self.start_session(capabilities, browser_profile)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/selenium/webdriver/remote/webdriver.py", line 252, in start_session
+    response = self.execute(Command.NEW_SESSION, parameters)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+WebDriverException: Message: other os error
+
+2019-03-23 23:27:21,763 - INFO - main - Started like process
+2019-03-23 23:27:24,296 - INFO - main - Cleaning temp files...
+2019-03-23 23:27:24,335 - INFO - main - Temp files cleaned successfully...
+2019-03-23 23:27:24,335 - ERROR - main - Message: other os error
+Traceback (most recent call last):
+  File "main.py", line 72, in main
+    like_post(post.get_post_link())
+  File "main.py", line 34, in like_post
+    driver = wb.tor()
+  File "/home/rnsbrum/Desktop/dev/fatal/likerbot/controllers/webdrivers/webdrivers.py", line 15, in tor
+    driver = TorBrowserDriver(tbb_dir)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/tbselenium/tbdriver.py", line 57, in __init__
+    log_path=tbb_logfile_path)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/selenium/webdriver/firefox/webdriver.py", line 174, in __init__
+    keep_alive=True)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/selenium/webdriver/remote/webdriver.py", line 157, in __init__
+    self.start_session(capabilities, browser_profile)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/selenium/webdriver/remote/webdriver.py", line 252, in start_session
+    response = self.execute(Command.NEW_SESSION, parameters)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+WebDriverException: Message: other os error
+
+2019-03-23 23:27:24,336 - INFO - main - Started like process
+2019-03-23 23:27:26,825 - INFO - main - Cleaning temp files...
+2019-03-23 23:27:26,867 - INFO - main - Temp files cleaned successfully...
+2019-03-23 23:27:26,867 - ERROR - main - Message: other os error
+Traceback (most recent call last):
+  File "main.py", line 72, in main
+    like_post(post.get_post_link())
+  File "main.py", line 34, in like_post
+    driver = wb.tor()
+  File "/home/rnsbrum/Desktop/dev/fatal/likerbot/controllers/webdrivers/webdrivers.py", line 15, in tor
+    driver = TorBrowserDriver(tbb_dir)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/tbselenium/tbdriver.py", line 57, in __init__
+    log_path=tbb_logfile_path)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/selenium/webdriver/firefox/webdriver.py", line 174, in __init__
+    keep_alive=True)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/selenium/webdriver/remote/webdriver.py", line 157, in __init__
+    self.start_session(capabilities, browser_profile)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/selenium/webdriver/remote/webdriver.py", line 252, in start_session
+    response = self.execute(Command.NEW_SESSION, parameters)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+WebDriverException: Message: other os error
+
+2019-03-23 23:27:26,868 - INFO - main - Started like process
+2019-03-23 23:27:29,447 - INFO - main - Cleaning temp files...
+2019-03-23 23:27:29,486 - INFO - main - Temp files cleaned successfully...
+2019-03-23 23:27:29,486 - ERROR - main - Message: other os error
+Traceback (most recent call last):
+  File "main.py", line 72, in main
+    like_post(post.get_post_link())
+  File "main.py", line 34, in like_post
+    driver = wb.tor()
+  File "/home/rnsbrum/Desktop/dev/fatal/likerbot/controllers/webdrivers/webdrivers.py", line 15, in tor
+    driver = TorBrowserDriver(tbb_dir)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/tbselenium/tbdriver.py", line 57, in __init__
+    log_path=tbb_logfile_path)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/selenium/webdriver/firefox/webdriver.py", line 174, in __init__
+    keep_alive=True)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/selenium/webdriver/remote/webdriver.py", line 157, in __init__
+    self.start_session(capabilities, browser_profile)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/selenium/webdriver/remote/webdriver.py", line 252, in start_session
+    response = self.execute(Command.NEW_SESSION, parameters)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "/home/rnsbrum/.local/lib/python2.7/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+WebDriverException: Message: other os error
+
+2019-03-23 23:27:29,487 - INFO - main - Started like process
+2019-03-23 23:44:59,828 - INFO - post - Scrapping post likes...
+2019-03-23 23:45:01,143 - INFO - post - Scrapping post likes...
+2019-03-23 23:45:01,690 - INFO - post - Created post with id 2...
+2019-03-23 23:45:01,690 - INFO - post - Getting post link...
+2019-03-23 23:45:01,690 - INFO - main - Started like process
+2019-03-24 11:38:20,672 - INFO - post - Scrapping post likes...
+2019-03-24 11:38:21,247 - INFO - post - Scrapping post likes...
+2019-03-24 11:38:21,754 - INFO - post - Created post with id 2...
+2019-03-24 11:38:21,755 - INFO - post - Getting post link...
+2019-03-24 11:38:21,755 - INFO - main - Started like process
+2019-03-24 11:38:59,388 - INFO - main - Cleaning temp files...
+2019-03-24 11:38:59,491 - INFO - main - Temp files cleaned successfully...
+2019-03-24 11:38:59,492 - ERROR - main - Message: Unable to locate element: .btn-like[data-id='3088921']
+Traceback (most recent call last):
+  File "main.py", line 72, in main
+    like_post(post.get_post_link())
+  File "main.py", line 36, in like_post
+    liker.like_post(driver, post)
+  File "/home/rnsbrum/Desktop/dev/fatal/likerbot/controllers/liker/liker.py", line 46, in like_post
+    raise Exception(e)
+Exception: Message: Unable to locate element: .btn-like[data-id='3088921']
+
+2019-03-24 11:38:59,493 - INFO - post - Getting post link...
+2019-03-24 11:38:59,493 - INFO - main - Started like process
+2019-03-24 11:56:02,498 - INFO - main - Process started...
+2019-03-24 11:56:02,498 - INFO - post - Scrapping post likes...
+2019-03-24 11:56:03,140 - INFO - post - Scrapping post likes...
+2019-03-24 11:56:03,674 - INFO - post - Created post with id 2...
+2019-03-24 11:56:03,674 - INFO - post - Getting post id...
+2019-03-24 11:56:03,674 - INFO - main - Process is using post id 2
+2019-03-24 11:56:03,674 - INFO - post - Getting post link...
+2019-03-24 11:56:03,674 - INFO - main - Started like process...
+2019-03-24 11:56:35,094 - INFO - main - Like process elapsed time: 26.1584019661s...
+2019-03-24 11:56:35,094 - INFO - post - Updating post 2 information...
+2019-03-24 11:56:35,094 - INFO - post - Scrapping post likes...
+2019-03-24 11:56:35,602 - INFO - post - Scrapping post likes...
+2019-03-24 11:56:35,950 - INFO - main - Cleaning temp files...
+2019-03-24 11:56:35,981 - INFO - main - Temp files cleaned successfully...
+2019-03-24 11:56:35,982 - INFO - post - Getting post id...
+2019-03-24 11:56:35,982 - INFO - main - Process is using post id 2
+2019-03-24 11:56:35,982 - INFO - post - Getting post link...
+2019-03-24 11:56:35,982 - INFO - main - Started like process...
+2019-03-24 11:57:07,069 - INFO - main - Like process elapsed time: 26.0796949863s...
+2019-03-24 11:57:07,069 - INFO - post - Updating post 2 information...
+2019-03-24 11:57:07,069 - INFO - post - Scrapping post likes...
+2019-03-24 11:57:07,583 - INFO - post - Scrapping post likes...
+2019-03-24 11:57:08,063 - INFO - main - Cleaning temp files...
+2019-03-24 11:57:08,084 - INFO - main - Temp files cleaned successfully...
+2019-03-24 11:57:08,084 - INFO - post - Getting post id...
+2019-03-24 11:57:08,085 - INFO - main - Process is using post id 2
+2019-03-24 11:57:08,085 - INFO - post - Getting post link...
+2019-03-24 11:57:08,085 - INFO - main - Started like process...
+2019-03-24 11:57:29,781 - INFO - main - Like process elapsed time: 16.7012190819s...
+2019-03-24 11:57:29,781 - INFO - post - Updating post 2 information...
+2019-03-24 11:57:29,781 - INFO - post - Scrapping post likes...
+2019-03-24 11:57:30,171 - INFO - post - Scrapping post likes...
+2019-03-24 11:57:30,671 - INFO - main - Cleaning temp files...
+2019-03-24 11:57:30,692 - INFO - main - Temp files cleaned successfully...
+2019-03-24 11:57:30,693 - INFO - post - Getting post id...
+2019-03-24 11:57:30,693 - INFO - main - Process is using post id 2
+2019-03-24 11:57:30,693 - INFO - post - Getting post link...
+2019-03-24 11:57:30,693 - INFO - main - Started like process...
+2019-03-24 11:57:57,842 - INFO - main - Like process elapsed time: 22.1748631001s...
+2019-03-24 11:57:57,843 - INFO - post - Updating post 2 information...
+2019-03-24 11:57:57,843 - INFO - post - Scrapping post likes...
+2019-03-24 11:57:58,347 - INFO - post - Scrapping post likes...
+2019-03-24 11:57:58,739 - INFO - main - Cleaning temp files...
+2019-03-24 11:57:58,762 - INFO - main - Temp files cleaned successfully...
+2019-03-24 11:57:58,763 - INFO - post - Getting post id...
+2019-03-24 11:57:58,763 - INFO - main - Process is using post id 2
+2019-03-24 11:57:58,763 - INFO - post - Getting post link...
+2019-03-24 11:57:58,763 - INFO - main - Started like process...
