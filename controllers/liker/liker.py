@@ -16,7 +16,7 @@ class Liker:
             #https://fatalmodel.com/116460/tais-ninfetinha-marau/3078419
             #https://fatalmodel.com/34409/laura-c-local-passo-fundo/3083178
             #webdriver.set_page_load_timeout(20)
-            webdriver.get('https://fatalmodel.com/412752/luana-dias-passo-fundo/3125728')
+            webdriver.get('https://fatalmodel.com/412752/luana-dias-passo-fundo')
             age18 = webdriver.find_element_by_id("agree-18")
             age18.click()
             webdriver.execute_script(script)
