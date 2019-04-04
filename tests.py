@@ -9,6 +9,13 @@ import subprocess, os, time
 import tbselenium.common as cm
 
 
+import tbselenium.common as cm
+from tbselenium.tbdriver import TorBrowserDriver
+from tbselenium.utils import launch_tbb_tor_with_stem
+
+from tbselenium.tbdriver import TorBrowserDriver
+with TorBrowserDriver(tbb_dir) as driver:
+    driver.get('https://google.com')
 
 
 
