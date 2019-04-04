@@ -8,13 +8,16 @@ from os import walk
 
 
 formatter = logging.Formatter(fmt='%(asctime)s - %(levelname)s - %(module)s - %(message)s')
-handler = logging.StreamHandler()
-handler.setFormatter(formatter)
+s_handler = logging.StreamHandler()
+s_handler.setFormatter(formatter)
 f_handler = logging.FileHandler('./config/file.log')   
 f_handler.setFormatter(formatter)
+
+
 logger = logging.getLogger('root')
 logger.setLevel(logging.DEBUG)
 logger.addHandler(f_handler)
+logger.addHandler(s_handler)
 
 
 wb = Webdrivers()
@@ -58,8 +61,11 @@ def clean_tmp():
 def main():
 
     logger.info('Process started...')
-    #https://fatalmodel.com/366618/natalia-passo-fundo/3070694
     posts = list()
+    """
+        API call to get posts here 
+        then create list of post objects
+    """
     posts.append(Post('https://fatalmodel.com/412752/luana-dias-passo-fundo/3125728', 2, 13))
 
     while len(posts) != 0:

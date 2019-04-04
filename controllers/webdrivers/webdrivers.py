@@ -1,9 +1,11 @@
-import os
+import os, logging
 import tbselenium.common as cm
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
 from tbselenium.tbdriver import TorBrowserDriver
 from tbselenium.utils import launch_tbb_tor_with_stem
+
+logger = logging.getLogger('root')
 
 class Webdrivers:
 
@@ -11,6 +13,7 @@ class Webdrivers:
         return webdriver.Chrome()
 
     def tor(self):
+        logger.debug('Creating Tor webdriver')
         tbb_dir = "/home/dev/Desktop/tor-browser_en-US"
         driver = TorBrowserDriver(tbb_dir) 
         return driver

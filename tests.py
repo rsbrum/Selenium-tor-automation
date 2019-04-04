@@ -1,3 +1,14 @@
+
+string = "http//fatalmodel.com/perfilid/nomedoperfil/postid"
+post_link = "https://fatalmodel.com/8399/karol-com-local-passo-fundo/2882281"
+exploded_link = post_link.split("/")
+url_profile = "{}//{}/{}/{}".format(
+exploded_link[0], exploded_link[2], exploded_link[3], exploded_link[4])
+post_id = exploded_link[5]
+res = string.split("/")
+print(url_profile)
+print(post_id)
+"""
 from controllers.vpn.vpn import Vpn
 from controllers.webdrivers.webdrivers import Webdrivers
 from bs4 import BeautifulSoup as bs
@@ -20,7 +31,6 @@ with TorBrowserDriver(tbb_dir, tor_cfg=cm.USE_STEM) as driver:
 tor_process.kill()
 
 
-"""
 html_doc = requests.get('https://fatalmodel.com/125829/marty-passo-fundo/3078003').text
 soup = bs(html_doc, 'html.parser')
 likes = soup.findAll("span", {"class": "like-count"})[0].text
