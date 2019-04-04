@@ -9,16 +9,15 @@ import subprocess, os, time
 import tbselenium.common as cm
 
 
-import tbselenium.common as cm
 from tbselenium.tbdriver import TorBrowserDriver
 from tbselenium.utils import launch_tbb_tor_with_stem
+
 tbb_dir = "/home/dev/Desktop/tor-browser_en-US"
-from tbselenium.tbdriver import TorBrowserDriver
-with TorBrowserDriver(tbb_dir) as driver:
-    driver.get('https://google.com')
+tor_process = launch_tbb_tor_with_stem(tbb_path=tbb_dir)
+with TorBrowserDriver(tbb_dir, tor_cfg=cm.USE_STEM) as driver:
+    driver.load_url("https://check.torproject.org")
 
-
-
+tor_process.kill()
 
 
 """
@@ -31,6 +30,13 @@ for l in likes:
         print(l)
 
 
+import tbselenium.common as cm
+from tbselenium.tbdriver import TorBrowserDriver
+from tbselenium.utils import launch_tbb_tor_with_stem
+tbb_dir = "/home/dev/Desktop/tor-browser_en-US"
+from tbselenium.tbdriver import TorBrowserDriver
+with TorBrowserDriver(tbb_dir) as driver:
+    driver.get('https://google.com')
 
 
 
