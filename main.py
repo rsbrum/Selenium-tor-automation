@@ -2,6 +2,7 @@ from controllers.liker.liker import Liker
 from controllers.vpn.vpn import Vpn
 from controllers.webdrivers.webdrivers import Webdrivers
 from controllers.post.post import Post
+from config.logger import setup_logger
 import os, time, requests, json, random, logging
 from os import walk
 
@@ -9,7 +10,7 @@ wb = Webdrivers()
 vpn = Vpn()
 liker = Liker()
 drivers = Webdrivers()
-logger = setup_loger()
+logger = setup_logger()
 api_url = 'https://fatal-bot-api.herokuapp.com/'
 
 """ 
@@ -18,17 +19,6 @@ api_url = 'https://fatal-bot-api.herokuapp.com/'
     And its easier to handle servers
     Validate link
 """ 
-def setup_loger():
-    formatter = logging.Formatter(fmt='%(asctime)s - %(levelname)s - %(module)s - %(message)s')
-    s_handler = logging.StreamHandler()
-    s_handler.setFormatter(formatter)
-    f_handler = logging.FileHandler('./config/file.log')   
-    f_handler.setFormatter(formatter)
-    logger = logging.getLogger('root')
-    logger.setLevel(logging.DEBUG)
-    logger.addHandler(f_handler)
-    logger.addHandler(s_handler)
-    return logger
 
 def like_post(post):
     logger.info('Started like process...')
