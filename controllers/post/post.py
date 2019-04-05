@@ -51,7 +51,9 @@ class Post:
         return likes_res
 
     def decrement_likes_in_db(self):
-        res = requests.put(self.api_url + 'posts/{}'.format(self.get_post_id))
+        url = self.api_url + 'posts/{}'.format(self.get_post_id)
+        self.logger.debug(url)
+        res = requests.put(url)
 
         if res.status_code != 200:
             self.logger.error('Failed to update post likes in the database!')
