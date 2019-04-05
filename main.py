@@ -2,34 +2,33 @@ from controllers.liker.liker import Liker
 from controllers.vpn.vpn import Vpn
 from controllers.webdrivers.webdrivers import Webdrivers
 from controllers.post.post import Post
-import logging
 import os, time, requests, json, random, logging
 from os import walk
-
-
-formatter = logging.Formatter(fmt='%(asctime)s - %(levelname)s - %(module)s - %(message)s')
-s_handler = logging.StreamHandler()
-s_handler.setFormatter(formatter)
-f_handler = logging.FileHandler('./config/file.log')   
-f_handler.setFormatter(formatter)
-
-
-logger = logging.getLogger('root')
-logger.setLevel(logging.DEBUG)
-logger.addHandler(f_handler)
-logger.addHandler(s_handler)
-
 
 wb = Webdrivers()
 vpn = Vpn()
 liker = Liker()
 drivers = Webdrivers()
+logger = setup_loger()
+api_url = 'https://fatal-bot-api.herokuapp.com/'
 
 """ 
     Each VM will handle one post
     That way there is not racing problems 
     And its easier to handle servers
+    Validate link
 """ 
+def setup_loger():
+    formatter = logging.Formatter(fmt='%(asctime)s - %(levelname)s - %(module)s - %(message)s')
+    s_handler = logging.StreamHandler()
+    s_handler.setFormatter(formatter)
+    f_handler = logging.FileHandler('./config/file.log')   
+    f_handler.setFormatter(formatter)
+    logger = logging.getLogger('root')
+    logger.setLevel(logging.DEBUG)
+    logger.addHandler(f_handler)
+    logger.addHandler(s_handler)
+    return logger
 
 def like_post(post):
     logger.info('Started like process...')
@@ -42,12 +41,13 @@ def like_post(post):
     logger.info("Like process elapsed time: {}s...".format(elapsed_time))
     
 def get_posts():
-    posts = ['https://fatalmodel.com/125829/marty-passo-fundo/3078003',
-            'https://fatalmodel.com/366618/natalia-passo-fundo/3070694',
-            'https://fatalmodel.com/431944/morena-rosa-passo-fundo/3082712',
-            'https://fatalmodel.com/343219/ariela-passo-fundo-centro-2/3067388',
-            'https://fatalmodel.com/177072/chocolate-cruz-alta/3069072',
-            'https://fatalmodel.com/122189/vitoria-passo-fundo-centro/3085536']
+    logger.info('Getting list of posts from database...')
+    try:
+        posts = requests.get(api_url + 'posts/')
+        return posts
+    except:
+        logger.warning('Failed to get posts!')
+
 
 def clean_tmp():
     logger.info('Cleaning temp files...')
@@ -61,21 +61,22 @@ def clean_tmp():
 def main():
 
     logger.info('Process started...')
+    posts_res = get_posts()
     posts = list()
-    """
-        API call to get posts here 
-        then create list of post objects
-    """
-    posts.append(Post('https://fatalmodel.com/412752/luana-dias-passo-fundo/3125728', 2, 13))
+
+    for post in posts_res: 
+        posts.append(Post(post['id'], post['link'], post['n_likes']))
 
     while len(posts) != 0:
         for post in posts:
             try:
                 post_id = post.get_post_id()
                 logger.info('Process is using post id {}'.format(post_id))
+
                 if post.is_job_done():
                     logger.info('Removing post {} from list...'.format(post_id))
                     posts.remove(post)
+
                     raise Exception("Post {} job is done".format(post_id))
 
                 like_post(post.get_post_link())

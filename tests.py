@@ -1,4 +1,9 @@
+import requests, json
 
+posts = requests.get('http://localhost:5000/posts/')
+posts = posts.json()['posts']
+
+print(posts)
 string = "http//fatalmodel.com/perfilid/nomedoperfil/postid"
 post_link = "https://fatalmodel.com/8399/karol-com-local-passo-fundo/2882281"
 exploded_link = post_link.split("/")

@@ -1,6 +1,5 @@
 from bs4 import BeautifulSoup as bs
-import requests
-import logging
+import requests, logging
 
 """
     verify in the class if the n of likes has increased
@@ -11,8 +10,9 @@ class Post:
         then it should update de given likes 
     """
     logger = logging.getLogger('root')
+    api_url = 'https://fatal-bot-api.herokuapp.com/'
 
-    def __init__(self, link, id, target_likes):
+    def __init__(self, id, link, target_likes):
         self.logger.info('Creating post object')
         self.link =  link
         self.id = id
@@ -49,7 +49,18 @@ class Post:
                 likes_res += l
 
         return likes_res
-   
+
+    def decrement_likes_in_db(self):
+        res = requests.put(self.api_url + 'posts/{}'.format(self.get_post_id))
+
+        if res.status_code != 200:
+            self.logger.error('Failed to update post likes in the database!')
+            self.logger.error(res.json())
+
+            raise Exception('Failed to update post likes in the database!!')
+
+        self.logger.info('Decremented post likes in the database successfully!')
+
     def update(self):
         self.logger.info('Updating post {} information...'.format(self.id))
         likes = self.get_likes()
@@ -61,6 +72,8 @@ class Post:
 
         self.tries += 1 
         self.current_likes = self.get_likes()
+
+        self.decrement_likes_in_db()
 
     def get_post_id(self):
         self.logger.info('Getting post id...')
