@@ -51,7 +51,8 @@ class Post:
         return likes_res
 
     def decrement_likes_in_db(self):
-        url = self.api_url + 'posts/{}'.format(self.get_post_id)
+        p_id = self.get_post_id()
+        url = self.api_url + 'posts/{}'.format(self.id)
         self.logger.debug(url)
         res = requests.put(url)
 
