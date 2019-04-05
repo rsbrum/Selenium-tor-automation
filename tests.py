@@ -1,9 +1,13 @@
 import requests, json
 
+res = requests.put('https://fatal-bot-api.herokuapp.com/posts/12')
+print(res.status_code)
+
+"""
+from controllers.vpn.vpn import Vpn
 posts = requests.get('https://fatal-bot-api.herokuapp.com/posts/')
 posts = posts.json()['posts']
 
-print(posts)
 string = "http//fatalmodel.com/perfilid/nomedoperfil/postid"
 post_link = "https://fatalmodel.com/8399/karol-com-local-passo-fundo/2882281"
 exploded_link = post_link.split("/")
@@ -11,10 +15,6 @@ url_profile = "{}//{}/{}/{}".format(
 exploded_link[0], exploded_link[2], exploded_link[3], exploded_link[4])
 post_id = exploded_link[5]
 res = string.split("/")
-print(url_profile)
-print(post_id)
-"""
-from controllers.vpn.vpn import Vpn
 from controllers.webdrivers.webdrivers import Webdrivers
 from bs4 import BeautifulSoup as bs
 import time
