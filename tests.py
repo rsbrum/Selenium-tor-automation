@@ -1,6 +1,6 @@
 import requests, json
 
-posts = requests.get('http://localhost:5000/posts/')
+posts = requests.get('https://fatal-bot-api.herokuapp.com/posts/')
 posts = posts.json()['posts']
 
 print(posts)

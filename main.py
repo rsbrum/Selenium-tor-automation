@@ -34,7 +34,7 @@ def get_posts():
     logger.info('Getting list of posts from database...')
     try:
         posts = requests.get(api_url + 'posts/')
-        return posts['posts']
+        return posts.json()['posts']
     except:
         logger.warning('Failed to get posts!')
 
