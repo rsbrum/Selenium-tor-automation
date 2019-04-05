@@ -76,6 +76,9 @@ def main():
             except Exception as e:
                 clean_tmp()
                 logger.exception(e)
+    
+    time.sleep(60)
+    main()
 
 if __name__ == "__main__":
     main()
